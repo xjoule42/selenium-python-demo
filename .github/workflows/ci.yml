@@ -26,11 +26,17 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest --alluredir=reports/allure-results
+        pytest --alluredir=reports/allure-results --html=reports/allure-report.html --junitxml=reports/junit.xml
 
     - name: Upload Allure Report Artifact
       uses: actions/upload-artifact@v4
       with:
         name: allure-report
         path: reports/allure-results
+
+    - name: Upload HTML Report Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: html-report
+        path: reports/report.html
 
