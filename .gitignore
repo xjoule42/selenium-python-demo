@@ -1,1 +1,16 @@
-.venv
+.venv/
+.env/
+# Python cache files
+__pycache__/
+*.py[cod]
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Pytest cache
+.cache/
+# Coverage reports
+.coverage
+.coverage.*
+# Mypy cache
+.mypy_cache/
+# Pyre type checker
+.pyre/
